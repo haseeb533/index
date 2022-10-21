@@ -1,0 +1,29 @@
+<html>
+<head>
+<title >BiLL Calculator</title>
+</head>
+<body style="font-size:20px;">
+<h1 style="text-align:center;">Bill Calculator</h1>
+<form onsubmit="return calculateTotalPrice();">
+<pre>
+<label>Product Name       :</label><input type="text" id="productname" placeholder="Product Name">
+<br>
+<label>Product Price in RS:</label><input type="number" id="price"placeholder="Amount">
+<br>
+<label>Quantity           :</label><input type="number" id="qty" placeholder="No of quantity">
+<br>
+<p>Total Price   :</p> <output id="totalprice" for="price qty"></output>
+<input type="Submit">
+</pre>
+</form>
+<script>
+            function calculateTotalPrice(){
+             var quantity=document.getElementById("qty").value;
+             var price=document.getElementById("price").value;
+             var output=document.getElementById("totalprice");
+             output.innerHTML=quantity*price;
+             return false;
+}
+</script>
+</body>  
+</html>
